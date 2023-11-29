@@ -1,0 +1,170 @@
+main
+    display: flex
+    background: #fff
+
+.div_img_container
+    width: 55%
+    height: 85vh
+    display: flex
+    align-items: center
+    flex-direction: column
+    justify-content: center
+
+.div_span
+    width: 45%
+    display: flex
+    justify-content: flex-start
+
+.span_1
+    color: #000
+    display: block
+    font-size: 1.2em
+    font-weight: 400
+    font-family: Roboto
+
+.div_img_produto
+    width: 45%
+    height: 70%
+    display: flex
+    align-items: center
+    justify-content: center
+    border: 0.2em dashed #a3a3a3
+    background: rgba(0, 0, 0, 0.2)
+
+.div_detalhes_produto
+    width: 45%
+    height: 20%
+    display: flex
+    margin-top: 0.2em
+    flex-direction: column
+    align-items: flex-start
+    padding: 0 0.5em 0 0.5em
+    justify-content: space-around
+    border: 0.2em dashed #a3a3a3
+    background: rgba(0, 0, 0, 0.2)
+
+.preço_detalhes_produtos
+    color: #000
+    font-size: 1.3em
+    font-weight: 400
+    font-family: Roboto
+
+.div_btns
+    width: 100%
+    display: flex
+    justify-content: space-between
+
+.nome_durável, .nome_cruelty_free
+    width: 48%
+    height: 2em
+    color: #000
+    font-weight: 400
+    font-size: 0.8em
+    border-radius: 0.5em
+    background: #b0b0b0
+    border: 0.2em solid #b0b0b0
+
+    &:hover
+        background: #b0b0b0
+
+    &:active
+        background: #b0b0b0
+
+.div_form
+    width: 45%
+    height: 85vh
+
+.h1_cadastrar_produto
+    color: #000
+    font-size: 2em
+    font-weight: 400
+    text-align: center
+    margin: 0.5em 0 0 0
+    font-family: Rowdies
+
+.form_cadastrar
+    width: 100%
+    padding: 1em
+    height: 74.4vh
+    margin: 0.5em 0 0 0
+
+.div_nome_produto
+    width: 100%
+
+.label, .span_2
+    display: block
+    color: #000
+    font-size: 1.2em
+    font-weight: 400
+    font-family: RocknRoll One
+
+#input_nome_produto
+    width: 100%
+    height: 2em
+    border: none
+    outline: none
+    color: #d95f83
+    border-radius: 0.8em
+    background: #c8c8c8
+
+.div_preço_material_produto, .div_selo_durabilidade_produto
+    display: flex
+    margin-top: 1em
+    justify-content: space-between
+
+#input_preço_produto, #input_material_produto, #input_selo_produto,
+#input_durabilidade_produto    
+    width: 14em
+    height: 2em
+    border: none
+    outline: none
+    color: #d95f83
+    border-radius: 0.8em
+    background: #c8c8c8
+
+.div_file
+    display: flex
+    margin: 1em 0 4.5em 0
+    justify-content: flex-start
+
+.label_file
+    width: 10em
+    height: 6em
+    display: flex
+    color: #d95f83
+    align-items: center
+    border-radius: 0.8em
+    background: #c8c8c8
+    justify-content: center
+
+    &:focus
+        outline: none
+        border: 0.2em solid #000
+
+    &:hover
+        cursor: pointer
+
+.img_file
+    max-width: 100%
+    max-height: 100%
+
+#input_file_produto
+    display: none
+
+.btn_enviar
+    width: 100%
+    height: 2em
+    border: none    
+    color: #fff
+    margin-top: 1em
+    font-weight: 400
+    border-radius:0.8em
+    background: #d95f83
+    font-family: RocknRoll One
+
+    &:focus
+        outline: none
+        border: 0.2em solid #000
+
+    &:hover
+        cursor: pointer        
