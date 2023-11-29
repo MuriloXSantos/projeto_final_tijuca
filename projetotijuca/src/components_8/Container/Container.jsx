@@ -4,7 +4,7 @@ function Container() {
 
   return (
 
-    <main>Container</main>
+    <main></main>
   )
 }
 
