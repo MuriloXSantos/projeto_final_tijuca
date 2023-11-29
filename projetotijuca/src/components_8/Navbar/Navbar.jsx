@@ -15,7 +15,7 @@ function Navbar() {
       </div>
 
       <div className="div_input">
-        
+
         <input type="text" placeholder="O que seu pet precisa ?" />
       </div>
 

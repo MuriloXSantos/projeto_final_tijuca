@@ -241,6 +241,7 @@
 
 import "./index.sass"
 import Navbar from "./components_8/Navbar/Navbar"
+import Container from "./components_8/Container/Container"
 
 function App() {
 
@@ -249,6 +250,8 @@ function App() {
     <div className="app">
 
       <Navbar />
+
+      <Container />
     </div>
   )
 }
