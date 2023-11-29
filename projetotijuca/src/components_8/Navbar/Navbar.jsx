@@ -7,11 +7,17 @@ function Navbar() {
 
     <nav>
 
-      <a className="link_nav" href="/">
-        <img className="img_nav" src={seta} alt="Sweet Pets" />
-      </a>
+      <div className="div_link_nav">
 
-      <input type="text" placeholder="O que seu pet precisa ?" />
+        <a className="link_nav" href="/">
+          <img className="img_nav" src={seta} alt="Sweet Pets" />
+        </a>
+      </div>
+
+      <div className="div_input">
+        
+        <input type="text" placeholder="O que seu pet precisa ?" />
+      </div>
 
     </nav>
   )
