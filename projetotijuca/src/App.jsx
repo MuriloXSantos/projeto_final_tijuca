@@ -215,28 +215,28 @@
 
 // código abaixo representando o carrinho
 
-import "./index.sass"
-import Navbar from "./components_7/Navbar/Navbar"
-import Footer from "./components_7/Footer/Footer"
-import Container from "./components_7/Container/Container"
+// import "./index.sass"
+// import Navbar from "./components_7/Navbar/Navbar"
+// import Footer from "./components_7/Footer/Footer"
+// import Container from "./components_7/Container/Container"
 
-function App() {
+// function App() {
 
-  return(
+//   return(
 
-    <div className="app">
+//     <div className="app">
 
-      <Navbar />
+//       <Navbar />
 
-      <Container />
+//       <Container />
         
-      <Footer />
+//       <Footer />
 
-    </div>
-  )
-}
+//     </div>
+//   )
+// }
 
-export default App
+// export default App
 
 // --------------------------------------------------------------------------
 
