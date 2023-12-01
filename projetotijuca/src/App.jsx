@@ -217,6 +217,7 @@
 
 // import "./index.sass"
 // import Navbar from "./components_7/Navbar/Navbar"
+// import Footer from "./components_7/Footer/Footer"
 // import Container from "./components_7/Container/Container"
 
 // function App() {
@@ -228,6 +229,8 @@
 //       <Navbar />
 
 //       <Container />
+        
+//       <Footer />
 
 //     </div>
 //   )
