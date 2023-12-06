@@ -107,13 +107,16 @@ main
     border-radius: 0.8em
     background: #c8c8c8
 
+    &:focus
+        border: 0.2em solid #000
+
 .div_preço_material_produto, .div_selo_durabilidade_produto
     display: flex
     margin-top: 1em
     justify-content: space-between
 
 #input_preço_produto, #input_material_produto, #input_selo_produto,
-#input_durabilidade_produto    
+#input_durabilidade_produto
     width: 14em
     height: 2em
     border: none
@@ -121,6 +124,9 @@ main
     color: #d95f83
     border-radius: 0.8em
     background: #c8c8c8
+
+    &:focus
+        border: 0.2em solid #000
 
 .div_file
     display: flex
@@ -154,11 +160,11 @@ main
 .btn_enviar
     width: 100%
     height: 2em
-    border: none    
+    border: none
     color: #fff
     margin-top: 1em
     font-weight: 400
-    border-radius:0.8em
+    border-radius: 0.8em
     background: #d95f83
     font-family: RocknRoll One
 
@@ -167,4 +173,4 @@ main
         border: 0.2em solid #000
 
     &:hover
-        cursor: pointer        
+        cursor: pointer

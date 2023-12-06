@@ -66,9 +66,9 @@
 
 //         {to_dos
 
-//         .filter((to_do) => 
-//         filter === "Todos" ? to_do.category : 
-//         filter === "Limpeza" ? to_do.category_1: 
+//         .filter((to_do) =>
+//         filter === "Todos" ? to_do.category :
+//         filter === "Limpeza" ? to_do.category_1:
 //         filter === "Remédio" ? to_do.category_2 :
 //         filter === "Vestimenta" ? to_do.category_3 :
 //         to_do.category)
@@ -192,24 +192,21 @@
 
 // código abaixo representando o cadastro do produto
 
-// import "./index.sass"
-// import Navbar from "./components_6/Navbar/Navbar"
-// import Container from "./components_6/Container/Container"
+import './index.sass'
+import Navbar from './components_6/Navbar/Navbar'
+import Container from './components_6/Container/Container'
 
-// function App() {
+function App() {
+  return (
+    <div className="app">
+      <Navbar />
 
-//     return(
+      <Container />
+    </div>
+  )
+}
 
-//         <div className="app">
-
-//             <Navbar />
-
-//             <Container />
-//         </div>
-//     )
-// }
-
-// export default App
+export default App
 
 // --------------------------------------------------------------------------
 
@@ -229,7 +226,7 @@
 //       <Navbar />
 
 //       <Container />
-        
+
 //       <Footer />
 
 //     </div>
@@ -266,5 +263,5 @@
 
 // --------------------------------------------------------------------------
 
-// Murilo: Detalhes de animais e produtos, cadastro de animais e produtos, 
+// Murilo: Detalhes de animais e produtos, cadastro de animais e produtos,
 // carrinho, lista de desejos. (6)
