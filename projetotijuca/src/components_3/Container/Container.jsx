@@ -30,7 +30,7 @@ function Container() {
       userID: 1,
     }
 
-    await url_fixa.post('/caminho', {
+    await url_fixa.post('/post', {
       body: post,
     })
   }
@@ -200,3 +200,5 @@ function Container() {
 }
 
 export default Container
+
+// 192.168.10.x:número_porta
