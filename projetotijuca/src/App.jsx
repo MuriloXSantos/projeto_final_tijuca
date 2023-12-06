@@ -117,24 +117,21 @@
 
 // código abaixo representando o cadastro de pets
 
-// import "./index.sass"
-// import Navbar from "./components_3/Navbar/Navbar"
-// import Container from "./components_3/Container/Container"
+import './index.sass'
+import Navbar from './components_3/Navbar/Navbar'
+import Container from './components_3/Container/Container'
 
-// function App() {
+function App() {
+  return (
+    <div className="app">
+      <Navbar />
 
-//     return (
+      <Container />
+    </div>
+  )
+}
 
-//         <div className="app">
-
-//             <Navbar />
-
-//             <Container />
-//         </div>
-//     )
-// }
-
-// export default App
+export default App
 
 // --------------------------------------------------------------------------
 
@@ -192,21 +189,21 @@
 
 // código abaixo representando o cadastro do produto
 
-import './index.sass'
-import Navbar from './components_6/Navbar/Navbar'
-import Container from './components_6/Container/Container'
+// import './index.sass'
+// import Navbar from './components_6/Navbar/Navbar'
+// import Container from './components_6/Container/Container'
 
-function App() {
-  return (
-    <div className="app">
-      <Navbar />
+// function App() {
+//   return (
+//     <div className="app">
+//       <Navbar />
 
-      <Container />
-    </div>
-  )
-}
+//       <Container />
+//     </div>
+//   )
+// }
 
-export default App
+// export default App
 
 // --------------------------------------------------------------------------
 
