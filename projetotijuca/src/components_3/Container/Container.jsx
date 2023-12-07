@@ -30,7 +30,7 @@ function Container() {
       userID: 1,
     }
 
-    await url_fixa.post('/post', {
+    await url_fixa.post('/post',{
       body: post,
     })
   }
