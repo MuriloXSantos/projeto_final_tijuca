@@ -5,34 +5,36 @@ import url_fixa from '../../Axios/url_fixa.js'
 
 function Container() {
   const [img, setImg] = useState()
+  const [imgFile, setImgFile] = useState()
   const [nome, setNome] = useState()
   const [sexo, setSexo] = useState()
   const [porte, setPorte] = useState()
   const [idade, setIdade] = useState()
   const [estado, setEstado] = useState()
   const [cidade, setCidade] = useState()
-  const [espécie, setEspécie] = useState()
-  const [descrição, setDescrição] = useState()
+  const [especie, setEspécie] = useState()
 
   async function createPost(e) {
     e.preventDefault()
 
-    const post = {
-      img,
-      nome,
-      sexo,
-      idade,
-      porte,
-      estado,
-      cidade,
-      espécie,
-      descrição,
-      userID: 1,
-    }
+    try {
+      const formData = new FormData()
 
-    await url_fixa.post('/post',{
-      body: post,
-    })
+      formData.append('sexo', sexo)
+      formData.append('nome', nome)
+      formData.append('porte', porte)
+      formData.append('idade', idade)
+      formData.append('file', imgFile)
+      formData.append('cidade', cidade)
+      formData.append('estado', estado)
+      formData.append('especie', especie)
+
+      await url_fixa.post('/animais', formData, {
+        headers: { 'Content-type': 'multipart/form-data' },
+      })
+    } catch (e) {
+      console.log('Deu errado')
+    }
   }
 
   function handleImage(e) {
@@ -40,6 +42,7 @@ function Container() {
       const [image] = e.target.files
       const photo = URL.createObjectURL(image)
       setImg(photo)
+      setImgFile(e.target.files[0])
     }
   }
 
@@ -186,11 +189,7 @@ function Container() {
             <section className="section">
               <span className="span_2">Conte um pouco sobre o pet:</span>
 
-              <textarea
-                required
-                name="descrição_pet"
-                onChange={(e) => setDescrição(e.target.value)}
-              ></textarea>
+              <textarea required name="descrição_pet"></textarea>
             </section>
           </div>
 
