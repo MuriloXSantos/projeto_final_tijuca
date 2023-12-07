@@ -1,7 +1,7 @@
 import './Container.sass'
 import { useState } from 'react'
 import pets from './images/pets.png'
-import url_fixa from '/home/estagiario-7/Documentos/projetotijuca/src/AXIOS/URL_FIXA.js'
+import url_fixa from '../../Axios/url_fixa.js'
 
 function Container() {
   const [img, setImg] = useState()
@@ -174,6 +174,7 @@ function Container() {
               </label>
 
               <input
+                required
                 type="file"
                 name="foto_pet"
                 accept="images/*"
@@ -187,6 +188,7 @@ function Container() {
 
               <textarea
                 required
+                name="descrição_pet"
                 onChange={(e) => setDescrição(e.target.value)}
               ></textarea>
             </section>
