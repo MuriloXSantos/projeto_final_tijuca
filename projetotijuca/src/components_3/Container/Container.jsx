@@ -17,6 +17,8 @@ function Container() {
     descricao_pet: '',
   })
 
+  // re.body.
+
   function handleChange(nameInput, valueInput) {
     const { name, valor } = { name: nameInput, valor: valueInput }
     setPet({
@@ -219,10 +221,8 @@ function Container() {
                 name="foto_pet"
                 accept="images/*"
                 id="input_file_pet"
-                value={pet.foto_pet}
                 onChange={(e) => {
                   handleImage(e)
-                  handleChange('foto_pet', e.target.value)
                 }}
               />
             </section>
@@ -234,6 +234,9 @@ function Container() {
                 required
                 name="descricao_pet"
                 value={pet.descricao_pet}
+                onChange={(e) => {
+                  handleChange('descricao_pet', e.target.value)
+                }}
               ></textarea>
             </section>
           </div>
