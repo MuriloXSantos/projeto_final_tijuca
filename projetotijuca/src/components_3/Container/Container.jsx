@@ -4,30 +4,42 @@ import pets from './images/pets.png'
 import url_fixa from '../../Axios/url_fixa.js'
 
 function Container() {
-  const [img, setImg] = useState()
-  const [imgFile, setImgFile] = useState()
-  const [nome, setNome] = useState()
-  const [sexo, setSexo] = useState()
-  const [porte, setPorte] = useState()
-  const [idade, setIdade] = useState()
-  const [estado, setEstado] = useState()
-  const [cidade, setCidade] = useState()
-  const [especie, setEspécie] = useState()
+  const [pet, setPet] = useState({
+    nome_pet: '',
+    foto_pet: '',
+    file_pet: '',
+    sexo_pet: '',
+    idade_pet: '',
+    porte_pet: '',
+    estado_pet: '',
+    cidade_pet: '',
+    especie_pet: '',
+    descricao_pet: '',
+  })
 
-  async function createPost(e) {
+  function handleChange(nameInput, valueInput) {
+    const { name, valor } = { name: nameInput, valor: valueInput }
+    setPet({
+      ...pet,
+      [name]: valor,
+    })
+  }
+
+  async function handleSubmit(e) {
     e.preventDefault()
 
     try {
       const formData = new FormData()
 
-      formData.append('sexo', sexo)
-      formData.append('nome', nome)
-      formData.append('porte', porte)
-      formData.append('idade', idade)
-      formData.append('file', imgFile)
-      formData.append('cidade', cidade)
-      formData.append('estado', estado)
-      formData.append('especie', especie)
+      formData.append('sexo', pet.sexo_pet)
+      formData.append('foto', pet.file_pet)
+      formData.append('nome', pet.nome_pet)
+      formData.append('porte', pet.porte_pet)
+      formData.append('idade', pet.idade_pet)
+      formData.append('cidade', pet.cidade_pet)
+      formData.append('estado', pet.estado_pet)
+      formData.append('especie', pet.especie_pet)
+      formData.append('descricao', pet.descricao_pet)
 
       await url_fixa.post('/animais', formData, {
         headers: { 'Content-type': 'multipart/form-data' },
@@ -41,8 +53,8 @@ function Container() {
     if (e.target.files[0]) {
       const [image] = e.target.files
       const photo = URL.createObjectURL(image)
-      setImg(photo)
-      setImgFile(e.target.files[0])
+      setPet({ ...pet, foto_pet: photo })
+      setPet({ ...pet, file_pet: e.target.files[0] })
     }
   }
 
@@ -58,7 +70,7 @@ function Container() {
         <form
           method="post"
           className="form_cadastrar"
-          onSubmit={(e) => createPost(e)}
+          onSubmit={(e) => handleSubmit(e)}
         >
           <div className="div_nome_pet">
             <label className="label" htmlFor="input_nome_pet">
@@ -70,7 +82,10 @@ function Container() {
               type="text"
               name="nome_pet"
               id="input_nome_pet"
-              onChange={(e) => setNome(e.target.value)}
+              value={pet.nome_pet}
+              onChange={(e) => {
+                handleChange('nome_pet', e.target.value)
+              }}
             />
           </div>
 
@@ -83,9 +98,12 @@ function Container() {
               <input
                 required
                 type="text"
-                name="espécie_pet"
+                name="especie_pet"
                 id="input_espécie_pet"
-                onChange={(e) => setEspécie(e.target.value)}
+                value={pet.especie_pet}
+                onChange={(e) => {
+                  handleChange('especie_pet', e.target.value)
+                }}
               />
             </section>
 
@@ -99,7 +117,10 @@ function Container() {
                 type="text"
                 name="sexo_pet"
                 id="input_sexo_pet"
-                onChange={(e) => setSexo(e.target.value)}
+                value={pet.sexo_pet}
+                onChange={(e) => {
+                  handleChange('sexo_pet', e.target.value)
+                }}
               />
             </section>
           </div>
@@ -115,7 +136,10 @@ function Container() {
                 type="text"
                 name="idade_pet"
                 id="input_idade_pet"
-                onChange={(e) => setIdade(e.target.value)}
+                value={pet.sexo_pet}
+                onChange={(e) => {
+                  handleChange('idade_pet', e.target.value)
+                }}
               />
             </section>
 
@@ -129,7 +153,10 @@ function Container() {
                 type="text"
                 name="porte_pet"
                 id="input_porte_pet"
-                onChange={(e) => setPorte(e.target.value)}
+                value={pet.porte_pet}
+                onChange={(e) => {
+                  handleChange('porte_pet', e.target.value)
+                }}
               />
             </section>
           </div>
@@ -145,7 +172,10 @@ function Container() {
                 type="text"
                 name="estado_pet"
                 id="input_estado_pet"
-                onChange={(e) => setEstado(e.target.value)}
+                value={pet.estado_pet}
+                onChange={(e) => {
+                  handleChange('estado_pet', e.target.value)
+                }}
               />
             </section>
 
@@ -159,7 +189,10 @@ function Container() {
                 type="text"
                 name="cidade_pet"
                 id="input_cidade_pet"
-                onChange={(e) => setCidade(e.target.value)}
+                value={pet.cidade_pet}
+                onChange={(e) => {
+                  handleChange('cidade_pet', e.target.value)
+                }}
               />
             </section>
           </div>
@@ -173,7 +206,11 @@ function Container() {
                 className="label_file"
                 htmlFor="input_file_pet"
               >
-                <img className="img_file" src={img} alt="Clique aqui" />
+                <img
+                  className="img_file"
+                  src={pet.foto_pet}
+                  alt="Clique aqui"
+                />
               </label>
 
               <input
@@ -182,14 +219,22 @@ function Container() {
                 name="foto_pet"
                 accept="images/*"
                 id="input_file_pet"
-                onChange={(e) => handleImage(e)}
+                value={pet.foto_pet}
+                onChange={(e) => {
+                  handleImage(e)
+                  handleChange('foto_pet', e.target.value)
+                }}
               />
             </section>
 
             <section className="section">
               <span className="span_2">Conte um pouco sobre o pet:</span>
 
-              <textarea required name="descrição_pet"></textarea>
+              <textarea
+                required
+                name="descricao_pet"
+                value={pet.descricao_pet}
+              ></textarea>
             </section>
           </div>
 
@@ -201,5 +246,3 @@ function Container() {
 }
 
 export default Container
-
-// 192.168.10.x:número_porta
