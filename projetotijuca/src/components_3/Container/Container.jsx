@@ -221,8 +221,10 @@ function Container() {
                 name="foto_pet"
                 accept="images/*"
                 id="input_file_pet"
+                value={pet.foto_pet}
                 onChange={(e) => {
                   handleImage(e)
+                  handleChange('foto_pet', e.target.value)
                 }}
               />
             </section>
