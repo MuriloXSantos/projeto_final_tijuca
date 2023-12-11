@@ -44,16 +44,8 @@ function Container() {
       await url_fixa.post('/animais', formData, {
         headers: { 'Content-type': 'multipart/form-data' },
       })
-
-      console.log(e)
-      console.log(pet)
-      console.log(pet.file_pet)
-      console.log(pet.foto_pet)
     } catch (e) {
-      console.log(e)
-      console.log(pet)
-      console.log(pet.file_pet)
-      console.log(pet.foto_pet)
+      console.log('Deu errado')
     }
   }
 
