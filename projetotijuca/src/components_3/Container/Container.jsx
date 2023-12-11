@@ -17,8 +17,6 @@ function Container() {
     descricao_pet: '',
   })
 
-  // re.body.
-
   function handleChange(nameInput, valueInput) {
     const { name, valor } = { name: nameInput, valor: valueInput }
     setPet({
@@ -46,8 +44,16 @@ function Container() {
       await url_fixa.post('/animais', formData, {
         headers: { 'Content-type': 'multipart/form-data' },
       })
+
+      console.log(e)
+      console.log(pet)
+      console.log(pet.file_pet)
+      console.log(pet.foto_pet)
     } catch (e) {
-      console.log('Deu errado')
+      console.log(e)
+      console.log(pet)
+      console.log(pet.file_pet)
+      console.log(pet.foto_pet)
     }
   }
 
@@ -224,7 +230,6 @@ function Container() {
                 value={pet.foto_pet}
                 onChange={(e) => {
                   handleImage(e)
-                  handleChange('foto_pet', e.target.value)
                 }}
               />
             </section>
