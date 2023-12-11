@@ -67,11 +67,7 @@ function Container() {
       <div className="div_form">
         <h1 className="h1_cadastrar_pets">Cadastre um pet para adoção</h1>
 
-        <form
-          method="post"
-          className="form_cadastrar"
-          onSubmit={(e) => handleSubmit(e)}
-        >
+        <form className="form_cadastrar" onSubmit={(e) => handleSubmit(e)}>
           <div className="div_nome_pet">
             <label className="label" htmlFor="input_nome_pet">
               Nome do pet
@@ -136,7 +132,7 @@ function Container() {
                 type="text"
                 name="idade_pet"
                 id="input_idade_pet"
-                value={pet.sexo_pet}
+                value={pet.idade_pet}
                 onChange={(e) => {
                   handleChange('idade_pet', e.target.value)
                 }}
