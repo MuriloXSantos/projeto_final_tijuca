@@ -40,12 +40,13 @@ function Container() {
         headers: { 'Content-type': 'multipart/form-data' },
       })
     } catch (e) {
+      console.log(pet)
       console.log('Deu errado')
     }
   }
 
-  function handleChange(nameInput, valueInput) {
-    const { name, valor } = { name: nameInput, valor: valueInput }
+  function handleChange(nameInput, defaultValueInput) {
+    const { name, valor } = { name: nameInput, valor: defaultValueInput }
     setPet({
       ...pet,
       [name]: valor,
@@ -82,7 +83,7 @@ function Container() {
               id="input_nome_pet"
               value={pet.nome_pet}
               onChange={(e) => {
-                handleChange('nome_pet', e.target.value)
+                handleChange('nome_pet', e.target.defaultValue)
               }}
             />
           </div>
@@ -99,7 +100,7 @@ function Container() {
                 id="input_espécie_pet"
                 value={pet.especie_pet}
                 onChange={(e) => {
-                  handleChange('especie_pet', e.target.value)
+                  handleChange('especie_pet', e.target.defaultValue)
                 }}
               />
             </section>
@@ -115,7 +116,7 @@ function Container() {
                 id="input_sexo_pet"
                 value={pet.sexo_pet}
                 onChange={(e) => {
-                  handleChange('sexo_pet', e.target.value)
+                  handleChange('sexo_pet', e.target.defaultValue)
                 }}
               />
             </section>
@@ -133,7 +134,7 @@ function Container() {
                 id="input_idade_pet"
                 value={pet.idade_pet}
                 onChange={(e) => {
-                  handleChange('idade_pet', e.target.value)
+                  handleChange('idade_pet', e.target.defaultValue)
                 }}
               />
             </section>
@@ -149,7 +150,7 @@ function Container() {
                 id="input_porte_pet"
                 value={pet.porte_pet}
                 onChange={(e) => {
-                  handleChange('porte_pet', e.target.value)
+                  handleChange('porte_pet', e.target.defaultValue)
                 }}
               />
             </section>
@@ -167,7 +168,7 @@ function Container() {
                 id="input_estado_pet"
                 value={pet.estado_pet}
                 onChange={(e) => {
-                  handleChange('estado_pet', e.target.value)
+                  handleChange('estado_pet', e.target.defaultValue)
                 }}
               />
             </section>
@@ -183,7 +184,7 @@ function Container() {
                 id="input_cidade_pet"
                 value={pet.cidade_pet}
                 onChange={(e) => {
-                  handleChange('cidade_pet', e.target.value)
+                  handleChange('cidade_pet', e.target.defaultValue)
                 }}
               />
             </section>
@@ -226,7 +227,7 @@ function Container() {
                 name="descricao_pet"
                 value={pet.descricao_pet}
                 onChange={(e) => {
-                  handleChange('descricao_pet', e.target.value)
+                  handleChange('descricao_pet', e.target.defaultValue)
                 }}
               />
             </section>
