@@ -1,9 +1,9 @@
 import './Container.sass'
-import Input from './Input'
-import Input2 from './Input_2'
-import Textarea from './Textarea'
 import { useState } from 'react'
+import Input from './Inputs/Input'
 import pets from './images/pets.png'
+import Input2 from './Inputs/Input_2'
+import Textarea from './Inputs/Textarea'
 import url_fixa from '../../Axios/url_fixa.js'
 
 function Container() {
@@ -19,14 +19,6 @@ function Container() {
     especie_pet: '',
     descricao_pet: '',
   })
-
-  function handleChange(nameInput, valueInput) {
-    const { name, valor } = { name: nameInput, valor: valueInput }
-    setPet({
-      ...pet,
-      [name]: valor,
-    })
-  }
 
   async function handleSubmit(e) {
     e.preventDefault()
@@ -50,6 +42,14 @@ function Container() {
     } catch (e) {
       console.log('Deu errado')
     }
+  }
+
+  function handleChange(nameInput, valueInput) {
+    const { name, valor } = { name: nameInput, valor: valueInput }
+    setPet({
+      ...pet,
+      [name]: valor,
+    })
   }
 
   function handleImage(e) {
