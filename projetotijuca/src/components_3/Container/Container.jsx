@@ -1,4 +1,7 @@
 import './Container.sass'
+import Input from './Input'
+import Input2 from './Input_2'
+import Textarea from './Textarea'
 import { useState } from 'react'
 import pets from './images/pets.png'
 import url_fixa from '../../Axios/url_fixa.js'
@@ -73,8 +76,7 @@ function Container() {
               Nome do pet
             </label>
 
-            <input
-              required
+            <Input
               type="text"
               name="nome_pet"
               id="input_nome_pet"
@@ -91,8 +93,7 @@ function Container() {
                 Espécie:
               </label>
 
-              <input
-                required
+              <Input
                 type="text"
                 name="especie_pet"
                 id="input_espécie_pet"
@@ -108,8 +109,7 @@ function Container() {
                 Sexo:
               </label>
 
-              <input
-                required
+              <Input
                 type="text"
                 name="sexo_pet"
                 id="input_sexo_pet"
@@ -127,8 +127,7 @@ function Container() {
                 Idade:
               </label>
 
-              <input
-                required
+              <Input
                 type="text"
                 name="idade_pet"
                 id="input_idade_pet"
@@ -144,8 +143,7 @@ function Container() {
                 Porte:
               </label>
 
-              <input
-                required
+              <Input
                 type="text"
                 name="porte_pet"
                 id="input_porte_pet"
@@ -163,8 +161,7 @@ function Container() {
                 Estado:
               </label>
 
-              <input
-                required
+              <Input
                 type="text"
                 name="estado_pet"
                 id="input_estado_pet"
@@ -180,8 +177,7 @@ function Container() {
                 Cidade:
               </label>
 
-              <input
-                required
+              <Input
                 type="text"
                 name="cidade_pet"
                 id="input_cidade_pet"
@@ -209,7 +205,7 @@ function Container() {
                 />
               </label>
 
-              <input
+              <Input2
                 required
                 type="file"
                 name="foto_pet"
@@ -225,14 +221,14 @@ function Container() {
             <section className="section">
               <span className="span_2">Conte um pouco sobre o pet:</span>
 
-              <textarea
+              <Textarea
                 required
                 name="descricao_pet"
                 value={pet.descricao_pet}
                 onChange={(e) => {
                   handleChange('descricao_pet', e.target.value)
                 }}
-              ></textarea>
+              />
             </section>
           </div>
 
