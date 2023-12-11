@@ -7,7 +7,7 @@ function Input2({ type, name, id, accept, value }) {
         name={name}
         id={id}
         accept={accept}
-        value={value}
+        defaultValue={value}
       />
     </>
   )

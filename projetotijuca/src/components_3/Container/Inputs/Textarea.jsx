@@ -1,7 +1,7 @@
 function Textarea({ name, value }) {
   return (
     <>
-      <textarea required name={name} value={value}></textarea>
+      <textarea required name={name} defaultValue={value}></textarea>
     </>
   )
 }

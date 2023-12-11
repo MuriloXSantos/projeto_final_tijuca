@@ -1,7 +1,7 @@
 function Input({ type, name, id, value }) {
   return (
     <>
-      <input required type={type} name={name} id={id} value={value} />
+      <input required type={type} name={name} id={id} defaultValue={value} />
     </>
   )
 }
