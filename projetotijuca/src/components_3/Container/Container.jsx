@@ -39,6 +39,8 @@ function Container() {
       await url_fixa.post('/animais', formData, {
         headers: { 'Content-type': 'multipart/form-data' },
       })
+      console.log(pet)
+      console.log('Deu certo')
     } catch (e) {
       console.log(pet)
       console.log('Deu errado')
