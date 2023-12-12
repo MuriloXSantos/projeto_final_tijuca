@@ -39,14 +39,9 @@ function Container() {
       await url_fixa.post('/animais', formData, {
         headers: { 'Content-type': 'multipart/form-data' },
       })
-      console.log(pet)
-      console.log('Deu certo !!')
     } catch (e) {
       console.log(pet)
       console.log('Deu errado')
-    } finally {
-      console.log(pet)
-      console.log('Nem try, nem catch !!')
     }
   }
 
@@ -76,7 +71,7 @@ function Container() {
       <div className="div_form">
         <h1 className="h1_cadastrar_pets">Cadastre um pet para adoção</h1>
 
-        <form className="form_cadastrar" onSubmit={(e) => handleSubmit(e)}>
+        <form method="post" className="form_cadastrar">
           <div className="div_nome_pet">
             <label className="label" htmlFor="input_nome_pet">
               Nome do pet
@@ -238,7 +233,9 @@ function Container() {
             </section>
           </div>
 
-          <button type="submit">Enviar</button>
+          <button type="submit" onClick={(e) => handleSubmit(e)}>
+            Enviar
+          </button>
         </form>
       </div>
     </main>
