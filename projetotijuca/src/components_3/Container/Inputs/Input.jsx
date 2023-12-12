@@ -1,13 +1,13 @@
-function Input( props ) {
+function Input({ id, type, name, value, onChange }) {
   return (
     <>
       <input
         required
-        id={props.id}
-        type={props.type}
-        name={props.name}
-        value={props.value}
-        onChange={props.onChange}
+        id={id}
+        type={type}
+        name={name}
+        value={value}
+        onChange={onChange}
       />
     </>
   )

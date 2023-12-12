@@ -1,11 +1,11 @@
-function Textarea(props) {
+function Textarea({ name, value, onChange }) {
   return (
     <>
       <textarea
         required
-        name={props.name}
-        value={props.value}
-        onChange={props.onChange}
+        name={name}
+        value={value}
+        onChange={onChange}
       ></textarea>
     </>
   )

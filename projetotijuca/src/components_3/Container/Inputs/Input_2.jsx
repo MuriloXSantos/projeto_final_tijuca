@@ -1,14 +1,14 @@
-function Input2(props) {
+function Input2({id, type, name, accept, value, onChange}) {
   return (
     <>
       <input
         required
-        id={props.id}
-        type={props.type}
-        name={props.name}
-        accept={props.accept}
-        value={props.value}
-        onChange={props.onChange}
+        id={id}
+        type={type}
+        name={name}
+        accept={accept}
+        value={value}
+        onChange={onChange}
       />
     </>
   )
