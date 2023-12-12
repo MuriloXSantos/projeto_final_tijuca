@@ -7,9 +7,10 @@ import Textarea from './Inputs/Textarea'
 import url_fixa from '../../Axios/url_fixa.js'
 
 function Container() {
+  const [img, setImg] = useState()
+
   const [pet, setPet] = useState({
     nome_pet: '',
-    foto_pet: '',
     file_pet: '',
     sexo_pet: '',
     idade_pet: '',
@@ -43,7 +44,7 @@ function Container() {
       console.log('Deu certo')
     } catch (e) {
       console.log(pet)
-      console.log('Deu errado')
+      console.error('Deu errado')
     }
   }
 
@@ -59,7 +60,7 @@ function Container() {
     if (e.target.files[0]) {
       const [image] = e.target.files
       const photo = URL.createObjectURL(image)
-      setPet({ ...pet, foto_pet: photo })
+      setImg(photo)
       setPet({ ...pet, file_pet: e.target.files[0] })
     }
   }
@@ -201,11 +202,7 @@ function Container() {
                 className="label_file"
                 htmlFor="input_file_pet"
               >
-                <img
-                  className="img_file"
-                  src={pet.foto_pet}
-                  alt="Clique aqui"
-                />
+                <img className="img_file" src={img} alt="Clique aqui" />
               </label>
 
               <Input2
@@ -234,10 +231,7 @@ function Container() {
               />
             </section>
           </div>
-
-          <button type="submit" onClick={(e) => handleSubmit(e)}>
-            Enviar
-          </button>
+          <button onClick={(e) => handleSubmit(e)}>Enviar</button>
         </form>
       </div>
     </main>
