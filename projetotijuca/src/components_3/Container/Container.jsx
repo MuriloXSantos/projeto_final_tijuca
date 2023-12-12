@@ -44,6 +44,9 @@ function Container() {
     } catch (e) {
       console.log(pet)
       console.log('Deu errado')
+    } finally {
+      console.log(pet)
+      console.log('Nem try, nem catch !!')
     }
   }
 
