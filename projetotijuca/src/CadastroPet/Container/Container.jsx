@@ -5,6 +5,8 @@ import pets from './images/pets.png'
 import Input2 from './Inputs/Input_2.jsx'
 import Textarea from './Inputs/Textarea.jsx'
 import url_fixa from '../../Axios/url_fixa.js'
+import toastError from '../Toasts/ToastError.js'
+import toastSucess from '../Toasts/ToastSucess.js'
 
 function Container() {
   const [img, setImg] = useState()
@@ -40,8 +42,10 @@ function Container() {
       await url_fixa.post('/animais', formData, {
         headers: { 'Content-type': 'multipart/form-data' },
       })
+      toastSucess()
       console.log(pet)
     } catch (e) {
+      toastError()
       console.log(e)
       console.log(pet)
     }
