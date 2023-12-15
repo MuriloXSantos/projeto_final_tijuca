@@ -2,6 +2,8 @@ import './Container.sass'
 import { useState } from 'react'
 import Input from './Inputs/Input.jsx'
 import Input2 from './Inputs/Input_2.jsx'
+// import Input3 from './Inputs/Input_3.jsx'
+// import Input4 from './Inputs/Input_4.jsx'
 import url_fixa_2 from '../../Axios2/UrlFixa.js'
 import toastError from '../Toasts/ToastError.js'
 import toastSucess from '../Toasts/ToastSucess.js'
@@ -86,7 +88,7 @@ function Container() {
 
         <form method="post" className="form_cadastrar">
           <div className="div_nome_produto">
-            <label className="label" htmlfor="input_nome_produto">
+            <label className="label" htmlFor="input_nome_produto">
               Nome do produto
             </label>
 
@@ -101,9 +103,9 @@ function Container() {
             />
           </div>
 
-          <div className="div_preço_material_produto">
+          <div className="div_material_durabilidade_produto">
             <section>
-              <label className="label" htmlfor="input_preço_produto">
+              <label className="label" htmlFor="input_preço_produto">
                 Preço
               </label>
 
@@ -119,7 +121,7 @@ function Container() {
             </section>
 
             <section>
-              <label className="label" htmlfor="input_material_produto">
+              <label className="label" htmlFor="input_material_produto">
                 Material
               </label>
 
@@ -137,7 +139,7 @@ function Container() {
 
           <div className="div_selo_durabilidade_produto">
             <section>
-              <label className="label" htmlfor="input_selo_produto">
+              <label className="label" htmlFor="input_selo_produto">
                 Selo cruelty-free ?
               </label>
 
@@ -153,7 +155,7 @@ function Container() {
             </section>
 
             <section>
-              <label className="label" htmlfor="input_durabilidade_produto">
+              <label className="label" htmlFor="input_durabilidade_produto">
                 Durabilidade
               </label>
 
@@ -175,7 +177,7 @@ function Container() {
 
               <label
                 className="label_file"
-                htmlfor="input_file_produto"
+                htmlFor="input_file_produto"
                 tabIndex="0"
               >
                 <img className="img_file" src={img} alt="Clique aqui" />
