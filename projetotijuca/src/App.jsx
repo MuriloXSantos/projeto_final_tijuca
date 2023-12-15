@@ -117,18 +117,18 @@
 
 // código abaixo representando o cadastro de pets
 
-import './index.sass'
-import CadastroPet from './CadastroPet/CadastroPet.jsx'
+// import './index.sass'
+// import CadastroPet from './CadastroPet/CadastroPet.jsx'
 
-function App() {
-  return (
-    <div className="app">
-      <CadastroPet />
-    </div>
-  )
-}
+// function App() {
+//   return (
+//     <div className="app">
+//       <CadastroPet />
+//     </div>
+//   )
+// }
 
-export default App
+// export default App
 
 // --------------------------------------------------------------------------
 
@@ -186,21 +186,21 @@ export default App
 
 // código abaixo representando o cadastro do produto
 
-// import './index.sass'
-// import Navbar from './components_6/Navbar/Navbar'
-// import Container from './components_6/Container/Container'
+import './index.sass'
+import Navbar from './components_6/Navbar/Navbar'
+import Container from './components_6/Container/Container'
 
-// function App() {
-//   return (
-//     <div className="app">
-//       <Navbar />
+function App() {
+  return (
+    <div className="app">
+      <Navbar />
 
-//       <Container />
-//     </div>
-//   )
-// }
+      <Container />
+    </div>
+  )
+}
 
-// export default App
+export default App
 
 // --------------------------------------------------------------------------
 

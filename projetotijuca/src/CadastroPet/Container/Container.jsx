@@ -1,7 +1,7 @@
 import './Container.sass'
 import { useState } from 'react'
-import Input from './Inputs/Input.jsx'
 import pets from './images/pets.png'
+import Input from './Inputs/Input.jsx'
 import Input2 from './Inputs/Input_2.jsx'
 import Textarea from './Inputs/Textarea.jsx'
 import url_fixa from '../../Axios/url_fixa.js'
