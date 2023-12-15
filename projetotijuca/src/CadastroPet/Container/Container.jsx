@@ -41,10 +41,9 @@ function Container() {
         headers: { 'Content-type': 'multipart/form-data' },
       })
       console.log(pet)
-      console.log('Deu certo')
     } catch (e) {
+      console.log(e)
       console.log(pet)
-      console.error('Deu errado')
     }
   }
 
