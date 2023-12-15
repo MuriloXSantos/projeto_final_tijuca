@@ -2,6 +2,9 @@ import './Container.sass'
 import { useState } from 'react'
 import Input from './Inputs/Input.jsx'
 import Input2 from './Inputs/Input_2.jsx'
+import url_fixa_2 from '../../Axios2/UrlFixa.js'
+import toastError from '../Toasts/ToastError.js'
+import toastSucess from '../Toasts/ToastSucess.js'
 
 function Container() {
   const [img, setImg] = useState()
@@ -14,6 +17,31 @@ function Container() {
     material_produto: '',
     durabilidade_produto: '',
   })
+
+  async function handleSubmit(e) {
+    e.preventDeafult()
+
+    try {
+      const formData = new FormData()
+
+      formData.append('nome', produto.nome_produto)
+      formData.append('selo', produto.selo_produto)
+      formData.append('foto', produto.file_produto)
+      formData.append('preco', produto.preco_produto)
+      formData.append('material', produto.material_produto)
+      formData.append('durabilidade', produto.durabilidade_produto)
+
+      await url_fixa_2.post('/animais', formData, {
+        headers: { 'Content-type': 'multipart/form-data' },
+      })
+      toastSucess()
+      console.log(produto)
+    } catch (e) {
+      toastError()
+      console.log(e)
+      console.log(produto)
+    }
+  }
 
   function handleChange(nameInput, valueInput) {
     const { name, valor } = { name: nameInput, valor: valueInput }
@@ -166,7 +194,9 @@ function Container() {
             </section>
           </div>
 
-          <button className="btn_enviar">Enviar</button>
+          <button className="btn_enviar" onClick={(e) => handleSubmit(e)}>
+            Enviar
+          </button>
         </form>
       </div>
     </main>

@@ -4,7 +4,7 @@ import pets from './images/pets.png'
 import Input from './Inputs/Input.jsx'
 import Input2 from './Inputs/Input_2.jsx'
 import Textarea from './Inputs/Textarea.jsx'
-import url_fixa from '../../Axios/url_fixa.js'
+import url_fixa from '../../Axios/UrlFixa.js'
 import toastError from '../Toasts/ToastError.js'
 import toastSucess from '../Toasts/ToastSucess.js'
 

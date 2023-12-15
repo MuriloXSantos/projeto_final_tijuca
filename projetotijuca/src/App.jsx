@@ -187,15 +187,12 @@
 // código abaixo representando o cadastro do produto
 
 import './index.sass'
-import Navbar from './components_6/Navbar/Navbar'
-import Container from './components_6/Container/Container'
+import CadastroProduto from './CadastroProduto/CadastroProduto.jsx'
 
 function App() {
   return (
     <div className="app">
-      <Navbar />
-
-      <Container />
+      <CadastroProduto />
     </div>
   )
 }

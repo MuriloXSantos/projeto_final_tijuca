@@ -2,7 +2,7 @@ import Navbar from './Navbar/Navbar.jsx'
 import { Toaster } from 'react-hot-toast'
 import Container from './Container/Container.jsx'
 
-function CadastroPet() {
+function CadastroProduto() {
   return (
     <>
       <Toaster />
@@ -13,4 +13,4 @@ function CadastroPet() {
     </>
   )
 }
-export default CadastroPet
+export default CadastroProduto
