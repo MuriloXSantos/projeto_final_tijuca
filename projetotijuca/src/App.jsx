@@ -118,15 +118,12 @@
 // código abaixo representando o cadastro de pets
 
 import './index.sass'
-import Navbar from './components_3/Navbar/Navbar'
-import Container from './components_3/Container/Container'
+import CadastroPet from './CadastroPet/CadastroPet.jsx'
 
 function App() {
   return (
     <div className="app">
-      <Navbar />
-
-      <Container />
+      <CadastroPet />
     </div>
   )
 }
