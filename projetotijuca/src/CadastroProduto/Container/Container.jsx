@@ -31,7 +31,7 @@ function Container() {
       formData.append('material', produto.material_produto)
       formData.append('durabilidade', produto.durabilidade_produto)
 
-      await url_fixa_2.post('/animais', formData, {
+      await url_fixa_2.post('/', formData, {
         headers: { 'Content-type': 'multipart/form-data' },
       })
       toastSucess()
