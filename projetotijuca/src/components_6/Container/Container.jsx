@@ -1,14 +1,34 @@
 import './Container.sass'
 import { useState } from 'react'
+import Input from './Inputs/Input.jsx'
+import Input2 from './Inputs/Input_2.jsx'
 
 function Container() {
   const [img, setImg] = useState()
+
+  const [produto, setProduto] = useState({
+    nome_produto: '',
+    selo_produto: '',
+    file_produto: '',
+    preco_produto: '',
+    material_produto: '',
+    durabilidade_produto: '',
+  })
+
+  function handleChange(nameInput, valueInput) {
+    const { name, valor } = { name: nameInput, valor: valueInput }
+    setProduto({
+      ...produto,
+      [name]: valor,
+    })
+  }
 
   function handleImage(e) {
     if (e.target.files[0]) {
       const [image] = e.target.files
       const photo = URL.createObjectURL(image)
       setImg(photo)
+      setProduto({ ...produto, file_produto: e.target.files[0] })
     }
   }
 
@@ -38,70 +58,85 @@ function Container() {
 
         <form method="post" className="form_cadastrar">
           <div className="div_nome_produto">
-            <label className="label" for="input_nome_produto">
+            <label className="label" htmlfor="input_nome_produto">
               Nome do produto
             </label>
 
-            <input
+            <Input
               type="text"
-              id="input_nome_produto"
               name="nome_produto"
-              required
+              id="input_nome_produto"
+              value={produto.nome_produto}
+              onChange={(e) => {
+                handleChange('nome_produto', e.target.value)
+              }}
             />
           </div>
 
           <div className="div_preço_material_produto">
             <section>
-              <label className="label" for="input_preço_produto">
+              <label className="label" htmlfor="input_preço_produto">
                 Preço
               </label>
 
-              <input
+              <Input
                 type="text"
+                name="preco_produto"
                 id="input_preço_produto"
-                name="preço_produto"
-                required
+                value={produto.preco_produto}
+                onChange={(e) => {
+                  handleChange('preco_produto', e.target.value)
+                }}
               />
             </section>
 
             <section>
-              <label className="label" for="input_material_produto">
+              <label className="label" htmlfor="input_material_produto">
                 Material
               </label>
 
-              <input
+              <Input
                 type="text"
-                id="input_material_produto"
                 name="material_produto"
-                required
+                id="input_material_produto"
+                value={produto.material_produto}
+                onChange={(e) => {
+                  handleChange('material_produto', e.target.value)
+                }}
               />
             </section>
           </div>
 
           <div className="div_selo_durabilidade_produto">
             <section>
-              <label className="label" for="input_selo_produto">
+              <label className="label" htmlfor="input_selo_produto">
                 Selo cruelty-free ?
               </label>
 
-              <input
+              <Input
                 type="text"
-                id="input_selo_produto"
                 name="selo_produto"
-                required
+                id="input_selo_produto"
+                value={produto.selo_produto}
+                onChange={(e) => {
+                  handleChange('selo_produto', e.target.value)
+                }}
               />
             </section>
 
             <section>
-              <label className="label" for="input_durabilidade_produto">
+              <label className="label" htmlfor="input_durabilidade_produto">
                 Durabilidade
               </label>
 
-              <input
+              <Input
                 type="text"
-                id="input_durabilidade_produto"
                 name="durabilidade_produto"
-                required
+                id="input_durabilidade_produto"
+                value={produto.durabilidade_produto}
+                onChange={(e) => {
+                  handleChange('durabilidade_produto', e.target.value)
+                }}
               />
             </section>
           </div>
@@ -112,18 +147,21 @@ function Container() {
 
               <label
                 className="label_file"
-                for="input_file_produto"
+                htmlfor="input_file_produto"
                 tabIndex="0"
               >
                 <img className="img_file" src={img} alt="Clique aqui" />
               </label>
 
-              <input
+              <Input2
                 type="file"
                 accept="images/*"
                 name="foto_produto"
                 id="input_file_produto"
-                onChange={(e) => handleImage(e)}
+                value={produto.foto_produto}
+                onChange={(e) => {
+                  handleImage(e)
+                }}
               />
             </section>
           </div>

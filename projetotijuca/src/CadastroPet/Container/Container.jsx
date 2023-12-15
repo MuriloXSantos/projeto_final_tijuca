@@ -209,7 +209,6 @@ function Container() {
               </label>
 
               <Input2
-                required
                 type="file"
                 name="foto_pet"
                 accept="images/*"
@@ -225,7 +224,6 @@ function Container() {
               <span className="span_2">Conte um pouco sobre o pet:</span>
 
               <Textarea
-                required
                 name="descricao_pet"
                 value={pet.descricao_pet}
                 onChange={(e) => {
