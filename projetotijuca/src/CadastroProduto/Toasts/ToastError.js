@@ -1,6 +1,6 @@
 import { toast } from 'react-hot-toast'
 
 function toastError() {
-  toast.error('Pet não cadastrado !')
+  toast.error('Produto não cadastrado !')
 }
 export default toastError
