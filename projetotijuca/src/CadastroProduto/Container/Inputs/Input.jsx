@@ -1,4 +1,4 @@
-function Input({ id, type, name, value, onChange }) {
+function Input({ id, type, placeholder, name, value, onChange }) {
   return (
     <>
       <input
@@ -8,6 +8,7 @@ function Input({ id, type, name, value, onChange }) {
         name={name}
         value={value}
         onChange={onChange}
+        placeholder={placeholder}
       />
     </>
   )

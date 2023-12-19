@@ -132,6 +132,7 @@ function Container() {
               <Input
                 type="text"
                 name="preco_produto"
+                placeholder="R$ 00,00"
                 id="input_preço_produto"
                 value={produto.preco_produto}
                 onChange={(e) => {
