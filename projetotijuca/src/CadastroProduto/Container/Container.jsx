@@ -5,7 +5,7 @@ import Input2 from './Inputs/Input_2.jsx'
 import Select1 from './Inputs/Select1.jsx'
 import Select2 from './Inputs/Select2.jsx'
 import Select3 from './Inputs/Select3.jsx'
-import url_fixa_2 from '../../Axios2/UrlFixa.js'
+import url_fixa from '../../Axios/UrlFixa.js'
 import toastError from '../Toasts/ToastError.js'
 import toastSucess from '../Toasts/ToastSucess.js'
 
@@ -34,7 +34,7 @@ function Container() {
       formData.append('material', produto.material_produto)
       formData.append('durabilidade', produto.durabilidade_produto)
 
-      await url_fixa_2.post('/', formData, {
+      await url_fixa.post('/animais', formData, {
         headers: { 'Content-type': 'multipart/form-data' },
       })
       toastSucess()
