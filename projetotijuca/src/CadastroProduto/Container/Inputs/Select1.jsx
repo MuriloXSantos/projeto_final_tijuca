@@ -1,4 +1,4 @@
-function Select1({ name, className, value, onChange }) {
+function Select1({ className, name, options, value, onChange }) {
   return (
     <>
       <select
@@ -7,11 +7,9 @@ function Select1({ name, className, value, onChange }) {
         onChange={onChange}
         className={className}
       >
-        <option label="Látex"></option>
-        <option label="Algodão"></option>
-        <option label="Plástico"></option>
-        <option label="Alumínio"></option>
-        <option label="Borracha"></option>
+        {options.map((item) => {
+          return <option value={item.value} label={item.label}></option>
+        })}
       </select>
     </>
   )

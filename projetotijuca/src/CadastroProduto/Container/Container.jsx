@@ -12,6 +12,25 @@ import toastSucess from '../Toasts/ToastSucess.js'
 function Container() {
   const [img, setImg] = useState()
 
+  const selo = [
+    { value: 'Sim', label: 'Sim' },
+    { value: 'Não', label: 'Não' },
+  ]
+
+  const durabilidades = [
+    { value: 'Alta', label: 'Alta' },
+    { value: 'Média', label: 'Média' },
+    { value: 'Baixa', label: 'Baixa' },
+  ]
+
+  const materiais = [
+    { value: 'Látex', label: 'Látex' },
+    { value: 'Algodão', label: 'Algodão' },
+    { value: 'Alumínio', label: 'Alumínio' },
+    { value: 'Plástico', label: 'Plástico' },
+    { value: 'Borracha', label: 'Borracha' },
+  ]
+
   const [produto, setProduto] = useState({
     nome_produto: '',
     selo_produto: '',
@@ -129,8 +148,9 @@ function Container() {
               </section>
 
               <Select1
-                name="material_produto"
                 className="select"
+                name="material_produto"
+                options={materiais}
                 value={produto.material_produto}
                 onChange={(e) => {
                   handleChange('material_produto', e.target.value)
@@ -144,8 +164,9 @@ function Container() {
               </section>
 
               <Select2
-                name="durabilidade_produto"
                 className="select"
+                options={durabilidades}
+                name="durabilidade_produto"
                 value={produto.durabilidade_produto}
                 onChange={(e) => {
                   handleChange('durabilidade_produto', e.target.value)
@@ -161,8 +182,9 @@ function Container() {
               </section>
 
               <Select3
-                name="selo_produto"
+                options={selo}
                 className="select"
+                name="selo_produto"
                 value={produto.selo_produto}
                 onChange={(e) => {
                   handleChange('selo_produto', e.target.value)

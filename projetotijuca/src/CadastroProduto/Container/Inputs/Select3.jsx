@@ -1,4 +1,4 @@
-function Select3({ name, className, value, onChange }) {
+function Select3({ options, className, name, value, onChange }) {
   return (
     <>
       <select
@@ -7,8 +7,9 @@ function Select3({ name, className, value, onChange }) {
         onChange={onChange}
         className={className}
       >
-        <option label="Sim"></option>
-        <option label="Não"></option>
+        {options.map((item) => {
+          return <option value={item.value} label={item.label}></option>
+        })}
       </select>
     </>
   )
