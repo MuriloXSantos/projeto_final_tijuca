@@ -89,17 +89,22 @@ main
     height: 74.4vh
     margin: 0.5em 0 0 0
 
-.div_nome_produto
+.div_nome_preço_produto
     width: 100%
+    display: flex
+    justify-content: space-between
 
-.label, .span_2
+.section_nome_preço
+    width: 45%
+
+.label
     display: block
     color: #000
     font-size: 1.2em
     font-weight: 400
     font-family: RocknRoll One
 
-#input_nome_produto
+#input_nome_produto, #input_preço_produto
     width: 100%
     height: 2em
     border: none
@@ -111,28 +116,50 @@ main
     &:focus
         border: 0.2em solid #000
 
-.div_material_durabilidade_produto, .div_selo_durabilidade_produto
+.div_material_durabilidade_produto
     display: flex
     margin-top: 1em
-    justify-content: space-between
 
-#input_preço_produto, #input_material_produto, #input_selo_produto,
-#input_durabilidade_produto
-    width: 14em
-    height: 2em
-    border: none
+.section_material_durabilidade, .section_selo_file
+    width: 50%
+    display: flex
+    align-items: center
+    flex-direction: column
+
+.section_span1
+    width: 100%
+    display: flex
+    margin-bottom: 0.3em
+    justify-content: flex-start
+
+.span1, .span2
+    font-size: 1.1em
+    font-weight: 400
+    font-family: RocknRoll One
+
+.section_span2
+    width: 100%
+    display: flex
+    margin-bottom: 0.3em
+    justify-content: flex-end
+
+select
     outline: none
     color: #d95f83
     border-radius: 0.8em
     background: #c8c8c8
+    border: 0.1em solid #000
 
-    &:focus
-        border: 0.2em solid #000
-
-.div_file
+.div_selo_file_produto
     display: flex
-    margin: 1em 0 4.5em 0
-    justify-content: flex-start
+    margin-top: 8.2em
+    justify-content: space-between
+
+.section_span
+    width: 100%
+    display: flex
+    margin-bottom: 0.3em
+    justify-content: center
 
 .label_file
     width: 10em

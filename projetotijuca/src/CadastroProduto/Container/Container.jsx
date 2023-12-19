@@ -2,8 +2,6 @@ import './Container.sass'
 import { useState } from 'react'
 import Input from './Inputs/Input.jsx'
 import Input2 from './Inputs/Input_2.jsx'
-// import Input3 from './Inputs/Input_3.jsx'
-// import Input4 from './Inputs/Input_4.jsx'
 import url_fixa_2 from '../../Axios2/UrlFixa.js'
 import toastError from '../Toasts/ToastError.js'
 import toastSucess from '../Toasts/ToastSucess.js'
@@ -87,24 +85,24 @@ function Container() {
         <h1 className="h1_cadastrar_produto">Cadastre um produto</h1>
 
         <form method="post" className="form_cadastrar">
-          <div className="div_nome_produto">
-            <label className="label" htmlFor="input_nome_produto">
-              Nome do produto
-            </label>
+          <div className="div_nome_preço_produto">
+            <section className="section_nome_preço">
+              <label className="label" htmlFor="input_nome_produto">
+                Nome do produto
+              </label>
 
-            <Input
-              type="text"
-              name="nome_produto"
-              id="input_nome_produto"
-              value={produto.nome_produto}
-              onChange={(e) => {
-                handleChange('nome_produto', e.target.value)
-              }}
-            />
-          </div>
+              <Input
+                type="text"
+                name="nome_produto"
+                id="input_nome_produto"
+                value={produto.nome_produto}
+                onChange={(e) => {
+                  handleChange('nome_produto', e.target.value)
+                }}
+              />
+            </section>
 
-          <div className="div_material_durabilidade_produto">
-            <section>
+            <section className="section_nome_preço">
               <label className="label" htmlFor="input_preço_produto">
                 Preço
               </label>
@@ -119,80 +117,73 @@ function Container() {
                 }}
               />
             </section>
+          </div>
 
-            <section>
-              <label className="label" htmlFor="input_material_produto">
-                Material
-              </label>
+          <div className="div_material_durabilidade_produto">
+            <section className="section_material_durabilidade">
+              <section className="section_span1">
+                <span class="span1">Escolha o material do produto</span>
+              </section>
 
-              <Input
-                type="text"
-                name="material_produto"
-                id="input_material_produto"
-                value={produto.material_produto}
-                onChange={(e) => {
-                  handleChange('material_produto', e.target.value)
-                }}
-              />
+              <select>
+                <option label="Látex"></option>
+                <option label="Algodão"></option>
+                <option label="Plástico"></option>
+                <option label="Alumínio"></option>
+                <option label="Borracha"></option>
+              </select>
+            </section>
+
+            <section class="section_material_durabilidade">
+              <section class="section_span2">
+                <span class="span2">Escolha a durabilidade do produto</span>
+              </section>
+
+              <select>
+                <option label="Alta"></option>
+                <option label="Média"></option>
+                <option label="Baixa"></option>
+              </select>
             </section>
           </div>
 
-          <div className="div_selo_durabilidade_produto">
-            <section>
-              <label className="label" htmlFor="input_selo_produto">
-                Selo cruelty-free ?
-              </label>
+          <div className="div_selo_file_produto">
+            <section className="section_selo_file">
+              <section className="section_span1">
+                <span className="span1">Selo cruelty-free</span>
+              </section>
 
-              <Input
-                type="text"
-                name="selo_produto"
-                id="input_selo_produto"
-                value={produto.selo_produto}
-                onChange={(e) => {
-                  handleChange('selo_produto', e.target.value)
-                }}
-              />
+              <select>
+                <option label="Sim"></option>
+                <option label="Não"></option>
+              </select>
             </section>
 
-            <section>
-              <label className="label" htmlFor="input_durabilidade_produto">
-                Durabilidade
-              </label>
+            <section className="section_selo_file">
+              <section className="section_span">
+                <span className="span1">Adicione fotos:</span>
+              </section>
 
-              <Input
-                type="text"
-                name="durabilidade_produto"
-                id="input_durabilidade_produto"
-                value={produto.durabilidade_produto}
-                onChange={(e) => {
-                  handleChange('durabilidade_produto', e.target.value)
-                }}
-              />
-            </section>
-          </div>
+              <section className="section_selo_file">
+                <label
+                  className="label_file"
+                  htmlFor="input_file_produto"
+                  tabIndex="0"
+                >
+                  <img className="img_file" src={img} alt="Clique aqui" />
+                </label>
 
-          <div className="div_file">
-            <section>
-              <span className="span_2">Adicione fotos:</span>
-
-              <label
-                className="label_file"
-                htmlFor="input_file_produto"
-                tabIndex="0"
-              >
-                <img className="img_file" src={img} alt="Clique aqui" />
-              </label>
-
-              <Input2
-                type="file"
-                accept="images/*"
-                name="foto_produto"
-                id="input_file_produto"
-                value={produto.foto_produto}
-                onChange={(e) => {
-                  handleImage(e)
-                }}
-              />
+                <Input2
+                  type="file"
+                  accept="images/*"
+                  name="foto_produto"
+                  id="input_file_produto"
+                  value={produto.foto_produto}
+                  onChange={(e) => {
+                    handleImage(e)
+                  }}
+                />
+              </section>
             </section>
           </div>
 
