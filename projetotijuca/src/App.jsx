@@ -186,18 +186,18 @@
 
 // código abaixo representando o cadastro do produto
 
-import './index.sass'
-import CadastroProduto from './CadastroProduto/CadastroProduto.jsx'
+// import './index.sass'
+// import CadastroProduto from './CadastroProduto/CadastroProduto.jsx'
 
-function App() {
-  return (
-    <div className="app">
-      <CadastroProduto />
-    </div>
-  )
-}
+// function App() {
+//   return (
+//     <div className="app">
+//       <CadastroProduto />
+//     </div>
+//   )
+// }
 
-export default App
+// export default App
 
 // --------------------------------------------------------------------------
 
