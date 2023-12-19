@@ -22,7 +22,7 @@ function Container() {
   })
 
   async function handleSubmit(e) {
-    e.preventDeafult()
+    e.preventDefault()
 
     try {
       const formData = new FormData()
