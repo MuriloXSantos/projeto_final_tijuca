@@ -1,7 +1,12 @@
-function Select2({ className }) {
+function Select2({ name, className, value, onChange }) {
   return (
     <>
-      <select className={className}>
+      <select
+        name={name}
+        value={value}
+        onChange={onChange}
+        className={className}
+      >
         <option label="Alta"></option>
         <option label="Média"></option>
         <option label="Baixa"></option>

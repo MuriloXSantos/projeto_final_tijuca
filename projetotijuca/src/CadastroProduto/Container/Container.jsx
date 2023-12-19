@@ -128,7 +128,14 @@ function Container() {
                 <span className="span1">Escolha o material do produto</span>
               </section>
 
-              <Select1 className="select" />
+              <Select1
+                name="material_produto"
+                className="select"
+                value={produto.material_produto}
+                onChange={(e) => {
+                  handleChange('material_produto', e.target.value)
+                }}
+              />
             </section>
 
             <section className="section_material_durabilidade">
@@ -136,7 +143,14 @@ function Container() {
                 <span className="span2">Escolha a durabilidade do produto</span>
               </section>
 
-              <Select2 className="select" />
+              <Select2
+                name="durabilidade_produto"
+                className="select"
+                value={produto.durabilidade_produto}
+                onChange={(e) => {
+                  handleChange('durabilidade_produto', e.target.value)
+                }}
+              />
             </section>
           </div>
 
@@ -146,7 +160,14 @@ function Container() {
                 <span className="span1">Selo cruelty-free</span>
               </section>
 
-              <Select3 className="select" />
+              <Select3
+                name="selo_produto"
+                className="select"
+                value={produto.selo_produto}
+                onChange={(e) => {
+                  handleChange('selo_produto', e.target.value)
+                }}
+              />
             </section>
 
             <section className="section_selo_file">

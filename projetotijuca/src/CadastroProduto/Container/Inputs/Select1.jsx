@@ -1,7 +1,12 @@
-function Select1({className}) {
+function Select1({ name, className, value, onChange }) {
   return (
     <>
-      <select className={className}>
+      <select
+        name={name}
+        value={value}
+        onChange={onChange}
+        className={className}
+      >
         <option label="Látex"></option>
         <option label="Algodão"></option>
         <option label="Plástico"></option>
