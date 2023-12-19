@@ -2,6 +2,9 @@ import './Container.sass'
 import { useState } from 'react'
 import Input from './Inputs/Input.jsx'
 import Input2 from './Inputs/Input_2.jsx'
+import Select1 from './Inputs/Select1.jsx'
+import Select2 from './Inputs/Select2.jsx'
+import Select3 from './Inputs/Select3.jsx'
 import url_fixa_2 from '../../Axios2/UrlFixa.js'
 import toastError from '../Toasts/ToastError.js'
 import toastSucess from '../Toasts/ToastSucess.js'
@@ -122,28 +125,18 @@ function Container() {
           <div className="div_material_durabilidade_produto">
             <section className="section_material_durabilidade">
               <section className="section_span1">
-                <span class="span1">Escolha o material do produto</span>
+                <span className="span1">Escolha o material do produto</span>
               </section>
 
-              <select>
-                <option label="Látex"></option>
-                <option label="Algodão"></option>
-                <option label="Plástico"></option>
-                <option label="Alumínio"></option>
-                <option label="Borracha"></option>
-              </select>
+              <Select1 className="select" />
             </section>
 
-            <section class="section_material_durabilidade">
-              <section class="section_span2">
-                <span class="span2">Escolha a durabilidade do produto</span>
+            <section className="section_material_durabilidade">
+              <section className="section_span2">
+                <span className="span2">Escolha a durabilidade do produto</span>
               </section>
 
-              <select>
-                <option label="Alta"></option>
-                <option label="Média"></option>
-                <option label="Baixa"></option>
-              </select>
+              <Select2 className="select" />
             </section>
           </div>
 
@@ -153,10 +146,7 @@ function Container() {
                 <span className="span1">Selo cruelty-free</span>
               </section>
 
-              <select>
-                <option label="Sim"></option>
-                <option label="Não"></option>
-              </select>
+              <Select3 className="select" />
             </section>
 
             <section className="section_selo_file">
