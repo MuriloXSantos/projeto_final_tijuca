@@ -74,15 +74,6 @@ function Container() {
         <div className="div_img_produto">
           <img className="img_file" src={img} alt="" />
         </div>
-
-        <div className="div_detalhes_produto">
-          <span className="preço_detalhes_produtos">R$71,99</span>
-
-          <div className="div_btns">
-            <button className="nome_durável">Durável</button>
-            <button className="nome_cruelty_free">Cruelty-free</button>
-          </div>
-        </div>
       </div>
 
       <div className="div_form">
