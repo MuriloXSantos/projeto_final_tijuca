@@ -8,7 +8,9 @@ function Select2({ className, options, name, value, onChange }) {
         className={className}
       >
         {options.map((item) => {
-          return <option value={item.value} label={item.label}></option>
+          return (
+            <option value={item.value} label={item.label}></option>
+          )
         })}
       </select>
     </>
