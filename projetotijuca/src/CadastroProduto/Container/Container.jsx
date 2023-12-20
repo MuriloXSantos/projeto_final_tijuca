@@ -8,28 +8,10 @@ import Select3 from './Inputs/Select3.jsx'
 import url_fixa from '../../Axios/UrlFixa.js'
 import toastError from '../Toasts/ToastError.js'
 import toastSucess from '../Toasts/ToastSucess.js'
+import { selo, durabilidades, materiais } from './Config.js'
 
 function Container() {
   const [img, setImg] = useState()
-
-  const selo = [
-    { value: 'Sim', label: 'Sim' },
-    { value: 'Não', label: 'Não' },
-  ]
-
-  const durabilidades = [
-    { value: 'Alta', label: 'Alta' },
-    { value: 'Média', label: 'Média' },
-    { value: 'Baixa', label: 'Baixa' },
-  ]
-
-  const materiais = [
-    { value: 'Látex', label: 'Látex' },
-    { value: 'Algodão', label: 'Algodão' },
-    { value: 'Alumínio', label: 'Alumínio' },
-    { value: 'Plástico', label: 'Plástico' },
-    { value: 'Borracha', label: 'Borracha' },
-  ]
 
   const [produto, setProduto] = useState({
     nome_produto: '',
