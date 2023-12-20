@@ -150,24 +150,15 @@
 
 // código abaixo representando os detalhes do animal
 
-import "./index.sass"
-import Navbar from "./components_4/Navbar/Navbar"
-import Footer from "./components_4/Footer/Footer"
-import Container from "./components_4/Container/Container"
+import './index.sass'
+import DetalhesPets from './DetalhesPets/DetalhesPets.jsx'
 
 function App() {
-
-    return(
-
-        <div className="app">
-
-            <Navbar />
-
-            <Container />
-
-            <Footer />
-        </div>
-    )
+  return (
+    <div className="app">
+      <DetalhesPets />
+    </div>
+  )
 }
 
 export default App
