@@ -131,30 +131,46 @@
 // export default App
 
 // --------------------------------------------------------------------------
+// código abaixo representando o cadastro do produto
 
-// código abaixo representando os detalhes do animal
-
-// import "./index.sass"
-// import Navbar from "./components_4/Navbar/Navbar"
-// import Footer from "./components_4/Footer/Footer"
-// import Container from "./components_4/Container/Container"
+// import './index.sass'
+// import CadastroProduto from './CadastroProduto/CadastroProduto.jsx'
 
 // function App() {
-
-//     return(
-
-//         <div className="app">
-
-//             <Navbar />
-
-//             <Container />
-
-//             <Footer />
-//         </div>
-//     )
+//   return (
+//     <div className="app">
+//       <CadastroProduto />
+//     </div>
+//   )
 // }
 
 // export default App
+
+// --------------------------------------------------------------------------
+
+// código abaixo representando os detalhes do animal
+
+import "./index.sass"
+import Navbar from "./components_4/Navbar/Navbar"
+import Footer from "./components_4/Footer/Footer"
+import Container from "./components_4/Container/Container"
+
+function App() {
+
+    return(
+
+        <div className="app">
+
+            <Navbar />
+
+            <Container />
+
+            <Footer />
+        </div>
+    )
+}
+
+export default App
 
 // --------------------------------------------------------------------------
 
@@ -181,23 +197,6 @@
 // }
 
 // export default App
-
-// --------------------------------------------------------------------------
-
-// código abaixo representando o cadastro do produto
-
-import './index.sass'
-import CadastroProduto from './CadastroProduto/CadastroProduto.jsx'
-
-function App() {
-  return (
-    <div className="app">
-      <CadastroProduto />
-    </div>
-  )
-}
-
-export default App
 
 // --------------------------------------------------------------------------
 
