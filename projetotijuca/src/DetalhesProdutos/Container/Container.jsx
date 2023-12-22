@@ -3,10 +3,15 @@ import coração from './images/coração.svg'
 import estrela from './images/estrela.svg'
 import carrinho from './images/carrinho.svg'
 import toastSucess from '../Toasts/ToastSucess.js'
+import toastSucessCart from '../Toasts/ToastSucessCart.js'
 
 function Container() {
   function listaDesejo() {
     toastSucess()
+  }
+
+  function adicionarCarrinho() {
+    toastSucessCart()
   }
 
   return (
@@ -50,7 +55,7 @@ function Container() {
           </div>
         </div>
 
-        <button className="btn_adicionar">
+        <button className="btn_adicionar" onClick={(e) => adicionarCarrinho()}>
           <img className="carrinho_btn" src={carrinho} alt="Sweet Pets" />
 
           <span className="span_btn">Adicionar ao carrinho</span>
