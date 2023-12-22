@@ -167,18 +167,18 @@
 
 // código abaixo representando os detalhes do produto
 
-import './index.sass'
-import DetalhesProdutos from './DetalhesProdutos/DetalhesProdutos.jsx'
+// import './index.sass'
+// import DetalhesProdutos from './DetalhesProdutos/DetalhesProdutos.jsx'
 
-function App() {
-  return (
-    <div className="app">
-      <DetalhesProdutos />
-    </div>
-  )
-}
+// function App() {
+//   return (
+//     <div className="app">
+//       <DetalhesProdutos />
+//     </div>
+//   )
+// }
 
-export default App
+// export default App
 
 // --------------------------------------------------------------------------
 
