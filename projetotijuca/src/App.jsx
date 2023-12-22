@@ -150,44 +150,35 @@
 
 // código abaixo representando os detalhes do animal
 
-import './index.sass'
-import DetalhesPets from './DetalhesPets/DetalhesPets.jsx'
+// import './index.sass'
+// import DetalhesPets from './DetalhesPets/DetalhesPets.jsx'
 
-function App() {
-  return (
-    <div className="app">
-      <DetalhesPets />
-    </div>
-  )
-}
+// function App() {
+//   return (
+//     <div className="app">
+//       <DetalhesPets />
+//     </div>
+//   )
+// }
 
-export default App
+// export default App
 
 // --------------------------------------------------------------------------
 
 // código abaixo representando os detalhes do produto
 
-// import "./index.sass"
-// import Navbar from "./components_5/Navbar/Navbar"
-// import Footer from "./components_5/Footer/Footer"
-// import Container from "./components_5/Container/Container"
+import './index.sass'
+import DetalhesProdutos from './DetalhesProdutos/DetalhesProdutos.jsx'
 
-// function App() {
+function App() {
+  return (
+    <div className="app">
+      <DetalhesProdutos />
+    </div>
+  )
+}
 
-//     return(
-
-//         <div className="app">
-
-//             <Navbar />
-
-//             <Container />
-
-//             <Footer />
-//         </div>
-//     )
-// }
-
-// export default App
+export default App
 
 // --------------------------------------------------------------------------
 
