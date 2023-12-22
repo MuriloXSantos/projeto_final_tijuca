@@ -2,8 +2,13 @@ import './Container.sass'
 import coração from './images/coração.svg'
 import estrela from './images/estrela.svg'
 import carrinho from './images/carrinho.svg'
+import toastSucess from '../Toasts/ToastSucess.js'
 
 function Container() {
+  function listaDesejo() {
+    toastSucess()
+  }
+
   return (
     <main>
       <div className="div_img_produto">
@@ -12,7 +17,7 @@ function Container() {
 
       <div className="div_info_produto">
         <div className="div_avaliações">
-          <div className="div_fundo_coração">
+          <div className="div_fundo_coração" onClick={(e) => listaDesejo()}>
             <img className="img_heart" src={coração} alt="Sweet Pets" />
           </div>
 

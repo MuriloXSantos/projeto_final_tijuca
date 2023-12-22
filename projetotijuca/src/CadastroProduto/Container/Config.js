@@ -4,9 +4,9 @@ export const selo = [
 ]
 
 export const durabilidades = [
-  { value: 'Alta', label: 'Alta' },
-  { value: 'Média', label: 'Média' },
-  { value: 'Baixa', label: 'Baixa' },
+  { value: 'Durável', label: 'Durável' },
+  { value: 'Pouco Durável', label: 'Pouco Durável' },
+  { value: 'Muito Durável', label: 'Muito Durável' },
 ]
 
 export const materiais = [
