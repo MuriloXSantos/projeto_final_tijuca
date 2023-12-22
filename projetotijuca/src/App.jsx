@@ -150,18 +150,18 @@
 
 // código abaixo representando os detalhes do animal
 
-// import './index.sass'
-// import DetalhesPets from './DetalhesPets/DetalhesPets.jsx'
+import './index.sass'
+import DetalhesPets from './DetalhesPets/DetalhesPets.jsx'
 
-// function App() {
-//   return (
-//     <div className="app">
-//       <DetalhesPets />
-//     </div>
-//   )
-// }
+function App() {
+  return (
+    <div className="app">
+      <DetalhesPets />
+    </div>
+  )
+}
 
-// export default App
+export default App
 
 // --------------------------------------------------------------------------
 

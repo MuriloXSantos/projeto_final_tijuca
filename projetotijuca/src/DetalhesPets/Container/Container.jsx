@@ -1,6 +1,5 @@
 import './Container.sass'
 import { useState, useEffect } from 'react'
-import location from './images/location.svg'
 import url_fixa from '../../Axios/UrlFixa.js'
 
 function Container() {
@@ -8,7 +7,7 @@ function Container() {
 
   async function busca() {
     try {
-      const response = await url_fixa.get('/animais/27')
+      const response = await url_fixa.get('/animais')
       const data = response.data
       setDetalhes(data)
       console.log('Deu certo !!')
@@ -34,11 +33,9 @@ function Container() {
         detalhes.map((details) => {
           return (
             <div className="div_descrição" key={details.id}>
-              <h1 className="h1_descrição">{details.nome}</h1>
+              <h1 className="h1_descrição">Chiquinho</h1>
 
               <div className="div_localização">
-                <img src={location} alt="Sweet Pets" className="img_location" />
-
                 <span className="span_location">xique xique-BA</span>
               </div>
 
