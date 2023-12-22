@@ -182,6 +182,23 @@ export default App
 
 // --------------------------------------------------------------------------
 
+// código abaixo representando a lista de desejos
+
+// import './index.sass'
+// import ListaDesejo from './ListaDesejo/ListaDesejo.jsx'
+
+// function App() {
+//   return (
+//     <div className="app">
+//       <ListaDesejo />
+//     </div>
+//   )
+// }
+
+// export default App
+
+// --------------------------------------------------------------------------
+
 // código abaixo representando o carrinho
 
 // import "./index.sass"
@@ -201,32 +218,6 @@ export default App
 
 //       <Footer />
 
-//     </div>
-//   )
-// }
-
-// export default App
-
-// --------------------------------------------------------------------------
-
-// código abaixo representando a lista de desejos
-
-// import "./index.sass"
-// import Navbar from "./components_8/Navbar/Navbar"
-// import Footer from "./components_8/Footer/Footer"
-// import Container from "./components_8/Container/Container"
-
-// function App() {
-
-//   return (
-
-//     <div className="app">
-
-//       <Navbar />
-
-//       <Container />
-
-//       <Footer />
 //     </div>
 //   )
 // }
