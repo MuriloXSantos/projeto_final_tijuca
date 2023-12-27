@@ -12,15 +12,15 @@ function Container() {
   const [img, setImg] = useState()
 
   const [pet, setPet] = useState({
-    nome_pet: '',
-    file_pet: '',
-    sexo_pet: '',
-    idade_pet: '',
-    porte_pet: '',
-    estado_pet: '',
-    cidade_pet: '',
-    especie_pet: '',
-    descricao_pet: '',
+    nomePet: '',
+    filePet: '',
+    sexoPet: '',
+    idadePet: '',
+    portePet: '',
+    estadoPet: '',
+    cidadePet: '',
+    especiePet: '',
+    descricaoPet: '',
   })
 
   async function handleSubmit(e) {
@@ -29,15 +29,15 @@ function Container() {
     try {
       const formData = new FormData()
 
-      formData.append('sexo', pet.sexo_pet)
-      formData.append('foto', pet.file_pet)
-      formData.append('nome', pet.nome_pet)
-      formData.append('porte', pet.porte_pet)
-      formData.append('idade', pet.idade_pet)
-      formData.append('cidade', pet.cidade_pet)
-      formData.append('estado', pet.estado_pet)
-      formData.append('especie', pet.especie_pet)
-      formData.append('descricao', pet.descricao_pet)
+      formData.append('sexo', pet.sexoPet)
+      formData.append('foto', pet.filePet)
+      formData.append('nome', pet.nomePet)
+      formData.append('porte', pet.portePet)
+      formData.append('idade', pet.idadePet)
+      formData.append('cidade', pet.cidadePet)
+      formData.append('estado', pet.estadoPet)
+      formData.append('especie', pet.especiePet)
+      formData.append('descricao', pet.descricaoPet)
 
       await url_fixa.post('/animais', formData, {
         headers: { 'Content-type': 'multipart/form-data' },
@@ -64,7 +64,7 @@ function Container() {
       const [image] = e.target.files
       const photo = URL.createObjectURL(image)
       setImg(photo)
-      setPet({ ...pet, file_pet: e.target.files[0] })
+      setPet({ ...pet, filePet: e.target.files[0] })
     }
   }
 
@@ -85,11 +85,11 @@ function Container() {
 
             <Input
               type="text"
-              name="nome_pet"
+              name="nomePet"
               id="input_nome_pet"
-              value={pet.nome_pet}
+              value={pet.nomePet}
               onChange={(e) => {
-                handleChange('nome_pet', e.target.value)
+                handleChange('nomePet', e.target.value)
               }}
             />
           </div>
@@ -102,11 +102,11 @@ function Container() {
 
               <Input
                 type="text"
-                name="especie_pet"
+                name="especiePet"
                 id="input_espécie_pet"
-                value={pet.especie_pet}
+                value={pet.especiePet}
                 onChange={(e) => {
-                  handleChange('especie_pet', e.target.value)
+                  handleChange('especiePet', e.target.value)
                 }}
               />
             </section>
@@ -118,11 +118,11 @@ function Container() {
 
               <Input
                 type="text"
-                name="sexo_pet"
+                name="sexoPet"
                 id="input_sexo_pet"
-                value={pet.sexo_pet}
+                value={pet.sexoPet}
                 onChange={(e) => {
-                  handleChange('sexo_pet', e.target.value)
+                  handleChange('sexoPet', e.target.value)
                 }}
               />
             </section>
@@ -136,11 +136,11 @@ function Container() {
 
               <Input
                 type="text"
-                name="idade_pet"
+                name="idadePet"
                 id="input_idade_pet"
-                value={pet.idade_pet}
+                value={pet.idadePet}
                 onChange={(e) => {
-                  handleChange('idade_pet', e.target.value)
+                  handleChange('idadePet', e.target.value)
                 }}
               />
             </section>
@@ -152,11 +152,11 @@ function Container() {
 
               <Input
                 type="text"
-                name="porte_pet"
+                name="portePet"
                 id="input_porte_pet"
-                value={pet.porte_pet}
+                value={pet.portePet}
                 onChange={(e) => {
-                  handleChange('porte_pet', e.target.value)
+                  handleChange('portePet', e.target.value)
                 }}
               />
             </section>
@@ -170,11 +170,11 @@ function Container() {
 
               <Input
                 type="text"
-                name="estado_pet"
+                name="estadoPet"
                 id="input_estado_pet"
-                value={pet.estado_pet}
+                value={pet.estadoPet}
                 onChange={(e) => {
-                  handleChange('estado_pet', e.target.value)
+                  handleChange('estadoPet', e.target.value)
                 }}
               />
             </section>
@@ -186,11 +186,11 @@ function Container() {
 
               <Input
                 type="text"
-                name="cidade_pet"
+                name="cidadePet"
                 id="input_cidade_pet"
-                value={pet.cidade_pet}
+                value={pet.cidadePet}
                 onChange={(e) => {
-                  handleChange('cidade_pet', e.target.value)
+                  handleChange('cidadePet', e.target.value)
                 }}
               />
             </section>
@@ -210,10 +210,8 @@ function Container() {
 
               <Input2
                 type="file"
-                name="foto_pet"
                 accept="images/*"
                 id="input_file_pet"
-                value={pet.foto_pet}
                 onChange={(e) => {
                   handleImage(e)
                 }}
@@ -224,10 +222,10 @@ function Container() {
               <span className="span_2">Conte um pouco sobre o pet:</span>
 
               <Textarea
-                name="descricao_pet"
-                value={pet.descricao_pet}
+                name="descricaoPet"
+                value={pet.descricaoPet}
                 onChange={(e) => {
-                  handleChange('descricao_pet', e.target.value)
+                  handleChange('descricaoPet', e.target.value)
                 }}
               />
             </section>
