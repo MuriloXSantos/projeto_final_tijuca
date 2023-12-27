@@ -14,12 +14,12 @@ function Container() {
   const [img, setImg] = useState()
 
   const [produto, setProduto] = useState({
-    nome_produto: '',
-    selo_produto: '',
-    file_produto: '',
-    preco_produto: '',
-    material_produto: '',
-    durabilidade_produto: '',
+    nomeProduto: '',
+    seloProduto: '',
+    fileProduto: '',
+    precoProduto: '',
+    materialProduto: '',
+    durabilidadeProduto: '',
   })
 
   async function handleSubmit(e) {
@@ -28,12 +28,12 @@ function Container() {
     try {
       const formData = new FormData()
 
-      formData.append('nome', produto.nome_produto)
-      formData.append('selo', produto.selo_produto)
-      formData.append('foto', produto.file_produto)
-      formData.append('preco', produto.preco_produto)
-      formData.append('material', produto.material_produto)
-      formData.append('durabilidade', produto.durabilidade_produto)
+      formData.append('nome', produto.nomeProduto)
+      formData.append('selo', produto.seloProduto)
+      formData.append('foto', produto.fileProduto)
+      formData.append('preco', produto.precoProduto)
+      formData.append('material', produto.materialProduto)
+      formData.append('durabilidade', produto.durabilidadeProduto)
 
       await url_fixa.post('/animais', formData, {
         headers: { 'Content-type': 'multipart/form-data' },
@@ -60,19 +60,28 @@ function Container() {
       const [image] = e.target.files
       const photo = URL.createObjectURL(image)
       setImg(photo)
-      setProduto({ ...produto, file_produto: e.target.files[0] })
+      setProduto({ ...produto, fileProduto: e.target.files[0] })
     }
   }
 
   return (
     <main>
-      <div className="div_img_container">
+      <div className="div_detalhes_container">
         <div className="div_span">
           <span className="span_1">Mini visualizador</span>
         </div>
 
         <div className="div_img_produto">
           <img className="img_file" src={img} alt="" />
+        </div>
+
+        <div className="div_detalhes_produto">
+          <span className="preço_detalhes_produtos">R$ {produto.precoProduto}</span>
+
+          <div className="div_btns">
+            <button className="nome_durável">{produto.durabilidadeProduto}</button>
+            <button className="nome_cruelty_free">Selo Cruelty-free: {produto.seloProduto}</button>
+          </div>
         </div>
       </div>
 
@@ -88,11 +97,11 @@ function Container() {
 
               <Input
                 type="text"
-                name="nome_produto"
+                name="nomeProduto"
                 id="input_nome_produto"
-                value={produto.nome_produto}
+                value={produto.nomeProduto}
                 onChange={(e) => {
-                  handleChange('nome_produto', e.target.value)
+                  handleChange('nomeProduto', e.target.value)
                 }}
               />
             </section>
@@ -104,12 +113,12 @@ function Container() {
 
               <Input
                 type="text"
-                name="preco_produto"
-                placeholder="R$ 00,00"
+                name="precoProduto"
+                placeholder="Ex.: 00,00"
                 id="input_preço_produto"
-                value={produto.preco_produto}
+                value={produto.precoProduto}
                 onChange={(e) => {
-                  handleChange('preco_produto', e.target.value)
+                  handleChange('precoProduto', e.target.value)
                 }}
               />
             </section>
@@ -123,11 +132,11 @@ function Container() {
 
               <Select1
                 className="select"
-                name="material_produto"
+                name="materialProduto"
                 options={materiais}
-                value={produto.material_produto}
+                value={produto.materialProduto}
                 onChange={(e) => {
-                  handleChange('material_produto', e.target.value)
+                  handleChange('materialProduto', e.target.value)
                 }}
               />
             </section>
@@ -140,10 +149,10 @@ function Container() {
               <Select2
                 className="select"
                 options={durabilidades}
-                name="durabilidade_produto"
-                value={produto.durabilidade_produto}
+                name="durabilidadeProduto"
+                value={produto.durabilidadeProduto}
                 onChange={(e) => {
-                  handleChange('durabilidade_produto', e.target.value)
+                  handleChange('durabilidadeProduto', e.target.value)
                 }}
               />
             </section>
@@ -158,10 +167,10 @@ function Container() {
               <Select3
                 options={selo}
                 className="select"
-                name="selo_produto"
-                value={produto.selo_produto}
+                name="seloProduto"
+                value={produto.seloProduto}
                 onChange={(e) => {
-                  handleChange('selo_produto', e.target.value)
+                  handleChange('seloProduto', e.target.value)
                 }}
               />
             </section>
@@ -183,9 +192,7 @@ function Container() {
                 <Input2
                   type="file"
                   accept="images/*"
-                  name="foto_produto"
                   id="input_file_produto"
-                  value={produto.foto_produto}
                   onChange={(e) => {
                     handleImage(e)
                   }}
