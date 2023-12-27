@@ -89,32 +89,6 @@
 
 // --------------------------------------------------------------------------
 
-// código abaixo representando a navbar, o container e o footer da home
-
-// import "./index.sass"
-// import Navbar from "./components_2/Navbar/Navbar"
-// import Footer from "./components_2/Footer/Footer"
-// import Container from "./components_2/Container/Container"
-
-// function App() {
-
-//     return (
-
-//         <div className="app">
-
-//             <Navbar />
-
-//             <Container />
-
-//             <Footer />
-//         </div>
-//     )
-// }
-
-// export default App
-
-// --------------------------------------------------------------------------
-
 // código abaixo representando o cadastro de pets
 
 // import './index.sass'
@@ -198,33 +172,3 @@
 // export default App
 
 // --------------------------------------------------------------------------
-
-// código abaixo representando o carrinho
-
-// import "./index.sass"
-// import Navbar from "./components_7/Navbar/Navbar"
-// import Footer from "./components_7/Footer/Footer"
-// import Container from "./components_7/Container/Container"
-
-// function App() {
-
-//   return(
-
-//     <div className="app">
-
-//       <Navbar />
-
-//       <Container />
-
-//       <Footer />
-
-//     </div>
-//   )
-// }
-
-// export default App
-
-// --------------------------------------------------------------------------
-
-// Murilo: Detalhes de animais e produtos, cadastro de animais e produtos,
-// carrinho, lista de desejos. (6)
