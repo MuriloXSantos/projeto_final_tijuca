@@ -182,9 +182,9 @@ function Container() {
 
               <section className="section_selo_file">
                 <label
+                  tabIndex="0"
                   className="label_file"
                   htmlFor="input_file_produto"
-                  tabIndex="0"
                 >
                   <img className="img_file" src={img} alt="Clique aqui" />
                 </label>
